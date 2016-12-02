@@ -1,0 +1,12 @@
+#easy-archives .ea-closed{display:none}
+#easy-archives .ea-open-button,#easy-archives .ea-closed-button{display:block;float:left;width:16px;height:16px;cursor:pointer}
+#easy-archives .ea-open-button{background:url(img/icons.png) 0 -100px no-repeat}
+#easy-archives .ea-closed-button{background:url(img/icons.png) 0 0 no-repeat}
+#easy-archives .ea-detail{font-weight:bolder}
+#easy-archives .ea-month{padding-bottom:10px}
+#easy-archives .ea-month li{list-style:none;}
+#easy-archives em{margin-left:5px;font-size:90%;font-style:normal;color:#999}
+#easy-archives .ea-filter{height:24px;padding-bottom:10px}
+#easy-archives .ea-year,#easy-archives .ea-author{font-weight:bolder}
+#easy-archives .ea-loader{background:url(img/ajax-loader.gif) left no-repeat;padding-left:24px;height:16px;line-height:16px;margin-left:10px}
+#easy-archives .ea-filter select,#easy-archives .ea-filter input{margin-right:10px}
