@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',          #Django会话框架
     'django.contrib.messages',          #Django消息传递框架
     'django.contrib.staticfiles',       #Django管理静态文件的框架
-	'gunicorn',
+    'gunicorn',
     'static',
     'home',
     'appadmin',
@@ -132,9 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = "/static/"
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # 静态文件在生产环境中的存储位置
-STATIC_ROOT = '/home/www/project_python/blog/static'
 # STATIC_ROOT = "/home/www/project_python/blog/static"
 STATICFILES_DIR = (
 		os.path.join(BASE_DIR, 'static'),
