@@ -1,0 +1,30 @@
+2016-12-06 22:33:16 140735309480704 [Note] /usr/local/bin/mysqld (mysqld 10.1.17-MariaDB) starting as process 2641 ...
+2016-12-06 22:33:16 140735309480704 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: The InnoDB memory heap is disabled
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Compressed tables use zlib 1.2.5
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Using SSE crc32 instructions
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Completed initialization of buffer pool
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Highest supported file format is Barracuda.
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: The log sequence numbers 3366596668 and 3366596668 in ibdata files do not match the log sequence number 3366596678 in the ib_logfiles!
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Database was not shutdown normally!
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Starting crash recovery.
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: Restoring possible half-written data pages 
+2016-12-06 22:33:16 140735309480704 [Note] InnoDB: from the doublewrite buffer...
+2016-12-06 22:33:17 140735309480704 [Note] InnoDB: 128 rollback segment(s) are active.
+2016-12-06 22:33:17 140735309480704 [Note] InnoDB: Waiting for purge to start
+2016-12-06 22:33:17 140735309480704 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.31-77.0 started; log sequence number 3366596678
+2016-12-06 22:33:17 4790861824 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2016-12-06 22:33:17 140735309480704 [Note] Plugin 'FEEDBACK' is disabled.
+2016-12-06 22:33:17 140735309480704 [Note] Recovering after a crash using tc.log
+2016-12-06 22:33:17 140735309480704 [Note] Starting crash recovery...
+2016-12-06 22:33:17 140735309480704 [Note] Crash recovery finished.
+2016-12-06 22:33:17 140735309480704 [Note] Server socket created on IP: '::'.
+2016-12-06 22:33:17 11ee82000 InnoDB: Error: Column last_update in table "mysql"."innodb_table_stats" is INT UNSIGNED NOT NULL but should be BINARY(4) NOT NULL (type mismatch).
+2016-12-06 22:33:17 11ee82000 InnoDB: Error: Fetch of persistent statistics requested for table "mysql"."gtid_slave_pos" but the required system tables mysql.innodb_table_stats and mysql.innodb_index_stats are not present or have unexpected structure. Using transient stats instead.
+2016-12-06 22:33:17 140735309480704 [Note] /usr/local/bin/mysqld: ready for connections.
+Version: '10.1.17-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew

@@ -7,7 +7,7 @@ from django.views.generic import RedirectView
 from .views import MyView
 urlpatterns = [
     url(r'^login$', MyView.as_view(), name='my-view'),
-    url(r'^login&r=login.html$', MyView.login(), name='my-view'),
+    url(r'^login&r=login.html$', views.login, name='login'),
     url(r'^$', RedirectView.as_view(url='http://py68.com:10000/appadmin/login&r=login.html'), name='django')
     # url(r'^$', views.index, name='index'),
     # url(r'^index$', views.index),

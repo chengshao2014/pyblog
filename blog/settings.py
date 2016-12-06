@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1r7n2es=c3s&z-_twb*so#ik0$_y8ahsl5osuh$_!pr*-@_*i+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -131,16 +131,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = 'http://pystyle.com/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # 静态文件在生产环境中的存储位置
 # STATIC_ROOT = "/home/www/project_python/blog/static"
-STATICFILES_DIR = (
-		os.path.join(BASE_DIR, 'static'),
-		'/home/www/project_python/blog/static/'
-	)
+# STATICFILES_DIR = (
+# 		os.path.join(BASE_DIR, 'static'),
+# 		'/home/www/project_python/blog/static/'
+# 	)
 
-STATIC_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATIC_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # 配置缓存
 CACHES = {
      'default': {
@@ -150,13 +150,3 @@ CACHES = {
          'TIMEOUT': None
      }
  }
-
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-#     'django.contrib.staticfiles.storage.StaticFilesStorage',
-)
-
-

@@ -15,8 +15,8 @@ class MyView(View):
         return HttpResponse(template.render(context, request))
         # return render(request, template_name='appadmin/index.html', context=context)
 
-    def login(self,request):
-        return HttpResponse("this is homepage!")
+def login(self,request):
+    return HttpResponse("this is homepage!")
         # return render(request, template_name='appadmin/login.html')
 
 
