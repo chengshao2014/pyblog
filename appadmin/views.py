@@ -23,8 +23,9 @@ def blog_form(request):
     if form.is_valid():
         data = form.cleaned_data
         if 'id' not in data:
-            post = Post(title = data['title'],author = data['author'], body = data['body'])
-            post.save(using='first')
+            post = Post(title = data['title'],body = data['body'], status = data['status'])
+            post.save()
+            return HttpResponseRedirect('/appadmin/login')
         else:
             post = Post.objects.get(id=data.id)
             post.title = data['title']
