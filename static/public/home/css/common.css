@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{font-family: "microsoft yahei", "黑体"}
 .main p.content .pull{margin-right: 3em;}
 #msgnum{background:#B90505 }
 body {
-        background-image: url("../images/login_bgimg.jpg") ;
+        background-image: url("../img/login_bgimg.jpg") ;
         background-repeat: repeat;
         color:#666;
         font-family: "微软雅黑";

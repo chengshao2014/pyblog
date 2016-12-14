@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1r7n2es=c3s&z-_twb*so#ik0$_y8ahsl5osuh$_!pr*-@_*i+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'static',
     'home',
     'appadmin',
+    'DjangoCaptcha'
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,10 @@ from django.template import RequestContext,loader
 from django.views.generic import View
 from appadmin import forms
 from django.shortcuts import render_to_response
+from django.shortcuts import render,render_to_response,HttpResponse
+from home.Helper import Checkcode
+from io import StringIO
+
 class MyView(View):
     def get(self, request, *args, **kwargs):
         latest_question_list = Post.objects.order_by('-update')
@@ -45,6 +49,29 @@ def blog_index(request):
     context = {'form':form,}
     return HttpResponse(template.render(context, request))
 
+
+def vote(request, id):
+    latest_question_list = Post.objects.get(id="%s" % id)
+    context = {'latest_question_list':latest_question_list,}
+    template = loader.get_template('appadmin/bolg_article.html')
+    return HttpResponse(template.render(context, request))
+    # return HttpResponse("You're voting on id %s." % id)
+
+def admin_login(request):
+    template = loader.get_template('appadmin/blog_login.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def CheckCode(request):
+    mstream = StringIO()
+    validate_code = Checkcode.create_validate_code()
+    img = validate_code[0]
+    img.save(mstream, "GIF")
+
+    #将验证码保存到session
+    request.session["CheckCode"] = validate_code[1]
+    return HttpResponse(mstream.getvalue())
+
 # def index(request):
 #     latest_question_list = Post.objects.order_by('-update')
 #     template = loader.get_template('appadmin/index.html')
@@ -67,5 +94,3 @@ def blog_index(request):
 #     return HttpResponse(response % id)
 #
 #
-# def vote(request, id):
-#     return HttpResponse("You're voting on id %s." % id)

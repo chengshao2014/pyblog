@@ -8,11 +8,10 @@
         <h1>
             {% if latest_question_list %}
             <ul>
-            {% for post in latest_question_list %}
-                <li style="list-style: none">{{post.publish | date:"Y-m-d H:i:s"}}
-                    <a href="/appadmin/{{ post.id }}/vote/">{{ post.title }}</a>
+                <h2>这是正文</h2>
+                <li style="list-style: none">{{ latest_question_list.body }}
+                    {{latest_question_list.publish | date:"Y-m-d H:i:s"}}
                 </li>
-            {% endfor %}
             </ul>
             {% else %}
                 <p>No polls are available.</p>

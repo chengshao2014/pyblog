@@ -1,15 +1,14 @@
 @CHARSET "UTF-8";
-
 html {font-family: sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
-body {background-image: url("../images/login_bgimg.jpg");background-repeat: repeat;color:#666;
+body {background-image: url("../img/login_bgimg.jpg");background-repeat: repeat;color:#666;
         font-family: "微软雅黑";height:100%;}
 li{list-style-type: none;}
 h1,h2,h3,h4,h5,h6{font-family: "microsoft yahei", "黑体"}
 .login{height:auto;left:50%;margin-left: -175px;margin-top: -260px;position: absolute;top:50%;width: 350px;font-size: 36px;
         font-weight: bold;color:#fff;}
 .main{padding: 30px 10px;height:350px;left:50%;margin-left:-175px;margin-top: -310px;position:absolute;top:70%;width:500px;background:#fff;background:rgba(255, 255, 255, 0.1) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/filter:Alpha(opacity=80); background:#fff;/*实现IE背景透明*/}
-/*    .con p{ 
-        position:relative; 
+/*    .con p{
+        position:relative;
       }实现IE文字不透明*/
 .main .login_img{width:50px;height:auto;margin-left:205px;margin-top: -120px;position:absolute;top:70%;}
 .main .login_user_img{width:200px;height:auto;position:absolute;margin-top:-110px;margin-left:0;}
