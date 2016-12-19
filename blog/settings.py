@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'static',
     'home',
     'appadmin',
-    'DjangoCaptcha'
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +151,4 @@ CACHES = {
          'TIMEOUT': None
      }
  }
+CAPTCHA_FONT_PATH = 'fonts/Vera.ttf'
