@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^index$',views.blog_index),
     url(r'^$', views.blog_form, name='index'),
     url(r'^(?P<id>[0-9]+)/vote/$', views.vote, name='vote'),
-    url(r'^checkcode$', views.CheckCode),
+    url(r'^code', views.code),
     # url(r'^index$', views.index),
     # url(r'^(?P<id>[0-9]+)/$', views.detail, name='detail'),
     # url(r'^(?P<id>[0-9]+)/results/$', views.results, name='results'),

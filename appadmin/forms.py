@@ -6,3 +6,5 @@ class BlogForm(forms.Form):
     body = forms.CharField(label = '内容',widget=forms.Textarea)
     status = forms.CharField(label = '作者')
 
+class CaptchaTestForm(forms.Form):
+    captcha = CaptchaField()

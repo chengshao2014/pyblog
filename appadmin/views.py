@@ -1,14 +1,16 @@
 #-*- coding:utf-8 -*-
-from django.http import HttpResponse,HttpResponseRedirect
 from .models import Post
 from django.template import RequestContext,loader
 from django.views.generic import View
 from appadmin import forms
-from django.shortcuts import render_to_response
-from django.shortcuts import render,render_to_response,HttpResponse
-from home.Helper import Checkcode
 from io import StringIO
-
+from PIL import Image, ImageDraw, ImageFont
+import random
+import datetime
+from hashlib import md5
+from django.http import HttpResponse,HttpResponseRedirect
+from DjangoCaptcha import Captcha
+import pytesseract
 class MyView(View):
     def get(self, request, *args, **kwargs):
         latest_question_list = Post.objects.order_by('-update')
@@ -62,15 +64,24 @@ def admin_login(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
-def CheckCode(request):
-    mstream = StringIO()
-    validate_code = Checkcode.create_validate_code()
-    img = validate_code[0]
-    img.save(mstream, "GIF")
+# def CheckCode(request):
+#     mstream = StringIO()
+#     print(mstream)
+#     exit()
+#     validate_code = Checkcode.create_validate_code()
+#     img = validate_code[0]
+#     img.save(mstream, "GIF")
+#
+#     #将验证码保存到session
+#     request.session["CheckCode"] = validate_code[1]
+#     return HttpResponse(mstream.getvalue())
 
-    #将验证码保存到session
-    request.session["CheckCode"] = validate_code[1]
-    return HttpResponse(mstream.getvalue())
+def code(request):
+    im = Image.open('out.png')
+    vcode = pytesseract.image_to_string(im)
+    print(vcode)
+
+
 
 # def index(request):
 #     latest_question_list = Post.objects.order_by('-update')

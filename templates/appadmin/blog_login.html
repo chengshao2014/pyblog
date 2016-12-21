@@ -34,13 +34,13 @@
                         <span style="color: red;" id="authpwd"></span>
                   </div>
                 </li>
-                <li class="li_captcha">
-                    <div>
+{#                <li class="li_captcha">#}
+{#                    <div>#}
 {#                        <input type="text" size="10" id="captcha" class="input_captcha" onblur="showCaptcha(this.value)">#}
-                        <p>验证码：<input type="text" name='checkcode'/> <img  onclick='ChangeCode();' id='imgCode' src='/appadmin/checkcode' title='点击更新' /></p>
-                    </div>
-                </li>
-                <span id="authCaptcha" style="color:red"></span>
+{#                        <p>验证码：<input type="text" name='checkcode'/> {{ form.captcha }}<img  onclick='ChangeCode();' id='imgCode' src='/appadmin/code' title='点击更新' /></p>#}
+{#                    </div>#}
+{#                </li>#}
+{#                <span id="authCaptcha" style="color:red"></span>#}
                 <li class="li_sub">
                     <input type="submit" name="sub" id="login_submit" value="登   录" onclick="authLogin();" class="input_sub btn btn-info"/>
                 </li>
